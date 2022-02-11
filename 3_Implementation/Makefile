@@ -43,9 +43,11 @@ all: $(SRC) $(BUILD)
 	gcc $(SRC) $(INC) -o $(PROJECT_OUTPUT)
 
 # Call `make run` to run the application
-run:$(PROJECT_NAME)./$(PROJECT_OUTPUT)
+run:$(PROJECT_NAME)
+	./$(PROJECT_OUTPUT)
 
-runtest:$(TEST_PROJ_NAME)./$(TEST_OUTPUT)
+runtest:$(PROJECT_NAME)
+	./$(TEST_OUTPUT)
 
 
 # Document the code using Doxygen
